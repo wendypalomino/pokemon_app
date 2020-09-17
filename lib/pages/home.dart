@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
 List<Widget> getListPokemons(List<Pokemon> listPokemons){
   List<Widget> listPokemonsWidget = [];
   for(var pokemon in listPokemons){
-      Widget pokemonWidget = pokemonCard(pokemon);
+      Widget pokemonWidget = PokemonCard(pokemon: pokemon);
      listPokemonsWidget.add(pokemonWidget);
     }
   return listPokemonsWidget;

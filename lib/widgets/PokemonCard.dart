@@ -2,9 +2,52 @@ import 'package:flutter/material.dart';
 import 'package:pokemon_app/widgets/pokemon_class.dart';
 import 'package:strings/strings.dart';
 
+class PokemonCard extends StatefulWidget {
 
+  final Pokemon pokemon;
+  PokemonCard({this.pokemon});
+
+  @override
+  _PokemonCardState createState() => _PokemonCardState();
+}
+
+class _PokemonCardState extends State<PokemonCard> {
+  @override
+  Widget build(BuildContext context) {
+    CardColorAndImage cardDetails = CardColorAndImage(widget.pokemon.type);
+    return Card(
+        color: cardDetails.color,
+        shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10)),
+        child: InkWell(
+          splashColor: Colors.blue.withAlpha(30),
+          onTap: () {
+          Navigator.pushNamed(context, '/about');},
+            child: Container(
+                child: Stack(
+                  children: [
+                    Positioned(top: 20, left: 10,
+                        child: Text(widget.pokemon.name, style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold))),
+                    Positioned( top: 50, left: 10,
+                        child: typePokemonButton(widget.pokemon),),
+                    Positioned( left: 105,top: 7,
+                        child: Text( '#00${widget.pokemon.id}', style: TextStyle(color: Colors.black12))),
+                    Positioned(top: 36,left: 75,
+                        child: cardDetails.image),
+                    Positioned( top: 18,left: 65,
+                        child: Image.network(widget.pokemon.photo)),],
+                ),
+            ),
+        ),
+    );
+  }
+}
+
+
+
+// -----------------------------------------------------------------------------//
 Widget pokemonCard(Pokemon pokemon){
-
+ // BuildContext context = BuildContext();
   CardColorAndImage cardDetails = CardColorAndImage(pokemon.type);
 
   return Card(
@@ -14,7 +57,10 @@ Widget pokemonCard(Pokemon pokemon){
     ),
     child: InkWell(
       splashColor: Colors.blue.withAlpha(30),
-      onTap: () { print('Card tapped.'); },
+      onTap: () {
+        //Navigator.pushNamed(context, '/about');
+        print('tapped');
+      },
       child: Container(
         child: Stack(
           children: [
@@ -68,5 +114,4 @@ Widget typePokemonButton( Pokemon pokemon){
     }
   }
 }
-
 

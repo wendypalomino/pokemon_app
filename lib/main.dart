@@ -7,7 +7,7 @@ void main(){
     debugShowCheckedModeBanner: false,
     home: Home(),
     theme: ThemeData(fontFamily: 'Circular'),
-    initialRoute: '/home',
+    initialRoute: '/about',
     routes: {
       '/home':  (context) => Home(),
       '/about': (context) => About(),

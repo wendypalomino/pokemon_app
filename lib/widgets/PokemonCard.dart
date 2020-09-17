@@ -83,13 +83,13 @@ Widget pokemonCard(Pokemon pokemon){
   );
 }
 
-Widget typePokemonButton( Pokemon pokemon){
+Widget typePokemonButton(Pokemon pokemon){
   CardColorAndImage cardDetails = CardColorAndImage(pokemon.type);
   return Container(
     padding: EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
     decoration: BoxDecoration(color: cardDetails.colorBox,
       borderRadius: BorderRadius.circular(50)),
-    child: Text(capitalize(pokemon.type),style: TextStyle( color: Colors.white, fontSize: 8),),);
+    child: Text(capitalize(pokemon.type),style: TextStyle( color: Colors.white, fontSize: 10),),);
 }
 
 

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pokemon_app/models/pokemon_class.dart';
 import 'package:pokemon_app/pages/screen_about/widgets/about_body.dart';
+import 'package:pokemon_app/pages/screen_about/widgets/about_category.dart';
 import 'package:pokemon_app/pages/screen_home/widgets/pokemon_card.dart';
+import 'package:pokemon_app/service/api.dart';
 
 class About extends StatefulWidget {
   final Pokemon pokemon;
@@ -12,10 +14,21 @@ class About extends StatefulWidget {
 }
 
 class _AboutState extends State<About> {
-  final Pokemon pokemon;
+  Pokemon pokemon;
   _AboutState(this.pokemon);
 
+
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Api().getPokemonById(pokemon.id).then((value) {
+      setState(() {
+        pokemon = value;
+        print(pokemon.about);
+      });
+    });
+  }
   
   Widget build(BuildContext context) {
 

@@ -37,7 +37,7 @@ class AboutCategory extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Height', style: TextStyle( color: Colors.grey),),
-                  Text('743290749'),
+                  Text('232'),
                 ],
               ),
               Column(
@@ -45,7 +45,7 @@ class AboutCategory extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Weight',style: TextStyle( color: Colors.grey),),
-                  Text('743290749'),
+                  Text('900'),
                 ],
               )
             ],

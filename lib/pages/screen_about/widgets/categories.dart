@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/models/pokemon_class.dart';
 import 'package:pokemon_app/pages/screen_about/widgets/about_category.dart';
+import 'package:pokemon_app/service/api.dart';
 
 class Categories extends StatefulWidget {
-  
+
   @override
   _CategoriesState createState() => _CategoriesState();
 }
 
 class _CategoriesState extends State<Categories> {
+
+
+
   List<String> categories = ["About", "Base Stats", "Evolution", "Moves"];
   int selectedIndex = 0;
-  @override
+
+
   Widget build(BuildContext context) {
     return Column(
       children: [
@@ -25,7 +31,6 @@ class _CategoriesState extends State<Categories> {
             ),
           ),
         ),
-        AboutCategory(),
       ],
     );
   }

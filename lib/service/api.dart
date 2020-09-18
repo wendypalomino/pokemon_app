@@ -1,4 +1,4 @@
-import 'package:pokemon_app/widgets/pokemon_class.dart';
+import 'package:pokemon_app/models/pokemon_class.dart';
 import 'package:http/http.dart';
 import 'dart:convert';
 

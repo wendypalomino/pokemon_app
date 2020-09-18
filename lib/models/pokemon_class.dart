@@ -1,11 +1,9 @@
+import 'package:flutter/material.dart';
+
 class Pokemon {
   int id;
-  String name;
-  String type;
-  String photo;
-  String about;
-  int height;
-  int weight;
+  String name, type, photo, about;
+  int height, weight;
   List stats;
 
   Pokemon.fromList(map){
@@ -25,4 +23,17 @@ class Pokemon {
     this.weight = map['weight'];
     this.stats = map['stats'];
   }
+
+  getPokemonColor(String type){
+    if ( type == 'grass'){
+      Color(0xFF48d0b0);
+    } else if ( type == 'fire'){
+      Color(0xFFFB6C6C);
+    } else{
+     Color(0xFF78bdfe);
+    }
+
+  }
 }
+
+

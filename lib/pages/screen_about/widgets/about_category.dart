@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokemon_app/models/pokemon_class.dart';
 
-
 class AboutCategory extends StatelessWidget {
   final Pokemon pokemon;
 
@@ -45,7 +44,7 @@ class AboutCategory extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Weight',style: TextStyle( color: Colors.grey),),
-                  Text('900'),
+                  Text('${pokemon.weight}'),
                 ],
               )
             ],
@@ -56,3 +55,4 @@ class AboutCategory extends StatelessWidget {
     );
   }
 }
+

@@ -26,6 +26,7 @@ class _AboutState extends State<About> {
       setState(() {
         pokemon = value;
         print(pokemon.about);
+        print(pokemon.weight);
       });
     });
   }

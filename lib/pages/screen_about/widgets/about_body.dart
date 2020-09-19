@@ -36,7 +36,7 @@ class AboutBody extends StatelessWidget {
                       topLeft: Radius.circular(24),
                     )
                 ),
-                child: Categories(),
+                child: Categories(pokemon: pokemon),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),

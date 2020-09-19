@@ -5,16 +5,23 @@ import 'package:pokemon_app/service/api.dart';
 
 class Categories extends StatefulWidget {
 
+  final Pokemon pokemon;
+
+  const Categories({Key key, this.pokemon}) : super(key: key);
+
+
   @override
-  _CategoriesState createState() => _CategoriesState();
+  _CategoriesState createState() => _CategoriesState(pokemon);
 }
 
 class _CategoriesState extends State<Categories> {
 
-
+   Pokemon pokemon;
 
   List<String> categories = ["About", "Base Stats", "Evolution", "Moves"];
   int selectedIndex = 0;
+
+  _CategoriesState(this.pokemon);
 
 
   Widget build(BuildContext context) {
@@ -31,6 +38,7 @@ class _CategoriesState extends State<Categories> {
             ),
           ),
         ),
+        AboutCategory(pokemon: pokemon),
       ],
     );
   }

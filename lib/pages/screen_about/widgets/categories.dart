@@ -32,14 +32,9 @@ class _CategoriesState extends State<Categories> {
           child: Scaffold(
             appBar: PreferredSize(
               preferredSize: Size.fromHeight(kToolbarHeight),
-              child: SizedBox(
+              child: Container(
                 height: 45,
                 child: TabBar(
-                  indicator: ShapeDecoration(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(24), topRight: Radius.circular(24))),
-                  ),
                   labelColor: Colors.grey,
                   indicatorColor: Color(0xff567DF4),
                   tabs: [

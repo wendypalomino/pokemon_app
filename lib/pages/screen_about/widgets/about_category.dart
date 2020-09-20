@@ -14,7 +14,7 @@ class AboutCategory extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            child: Text( "Bulbasaur is a small, quadruped Pokémon that has blue-green skin with darker patches. It has red eyes with white pupils, pointed, ear-like structures on top of ile l",),
+            child: Text(pokemon.about, maxLines: 4),
           ),
           SizedBox(height: 30),
           Container(
@@ -36,7 +36,7 @@ class AboutCategory extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Height', style: TextStyle( color: Colors.grey),),
-                  Text('232'),
+                  Text('${pokemon.height}'),
                 ],
               ),
               Column(

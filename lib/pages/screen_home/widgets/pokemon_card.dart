@@ -26,9 +26,9 @@ class PokemonCard extends StatelessWidget {
               child: typePokemonButton(pokemon),),
             Positioned( left: 105,top: 7,
                 child: Text( '#00${pokemon.id}', style: TextStyle(color: Colors.black12))),
-            Positioned(top: 36,left: 75,
+            Positioned(top: 30,left: 82,
                 child: cardDetails.image),
-            Positioned( top: 18,left: 65,
+            Positioned( top: 14,left: 65,
                 child: Image.network(pokemon.photo)),],
         ),
       )

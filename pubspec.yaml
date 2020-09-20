@@ -21,11 +21,12 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  step_progress_indicator: ^0.2.4+7
+
   strings: ^0.1.2
   http: ^0.12.2
   flutter:
     sdk: flutter
+  step_progress_indicator: ^0.2.4+7
 
 
   # The following adds the Cupertino Icons font to your application.

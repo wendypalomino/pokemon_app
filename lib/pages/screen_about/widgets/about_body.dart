@@ -3,7 +3,6 @@ import 'package:pokemon_app/models/pokemon_class.dart';
 import 'package:pokemon_app/pages/screen_about/widgets/categories.dart';
 import 'package:pokemon_app/pages/screen_home/widgets/pokemon_card.dart';
 
-
 class AboutBody extends StatelessWidget {
   const AboutBody({
     Key key,
@@ -59,8 +58,16 @@ class AboutBody extends StatelessWidget {
               ),
               Positioned(
                   left: size.width/2.8,
-                  top: 135 ,
+                  top: 115 ,
                   child: Image.network(pokemon.photo)
+              ),
+              Positioned(
+                top: 15,
+                left: 300,
+                child: Text('#00${pokemon.id}', style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),),
               ),
             ],
           ),
@@ -69,3 +76,4 @@ class AboutBody extends StatelessWidget {
     );
   }
 }
+
